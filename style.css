@@ -1,0 +1,754 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #003366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background-image: url("../images/uni.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 100vh;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 4em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5em;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.hero h1,
+.hero p {
+    position: relative;
+    z-index: 1;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #003366;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 2em;
+    color: #005599;
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ffcc00;
+    color: #003366;
+}
+
+.department {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    gap: 20px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.dept-img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.dept-img:hover {
+    transform: scale(1.1);
+}
+
+.faculty-card {
+    position: relative;
+    cursor: pointer;
+}
+
+
+/* Fullscreen image overlay on hover */
+
+.faculty-card::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1000;
+    transition: all 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.faculty-card:hover::after {
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    pointer-events: auto;
+    background-image: url(attr(data-img));
+    /* Ensure this works in supported browsers */
+}
+
+
+/* General styles */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/uni.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f0f0f0;
+    /* Light text color for good contrast */
+}
+
+
+/* Header */
+
+header {
+    background-color: rgba(0, 51, 102, 0.8);
+    /* Dark semi-transparent header */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #ff6f61;
+    /* Hover effect color */
+    color: #003366;
+}
+
+
+/* Main Contact Section */
+
+.contact-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(0, 51, 102, 0.7);
+    /* Background with some transparency */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    transition: border 0.3s, background-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #ff6f61;
+    background-color: #fff;
+    outline: none;
+}
+
+textarea {
+    height: 150px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff6f61;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ff3b2e;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* General styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("images/uni.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f0f0f0;
+    /* Lighter text color for better contrast */
+}
+
+header {
+    background-color: rgba(40, 40, 40, 0.7);
+    /* Dark gray with transparency for the header */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ff6f61;
+    /* Coral color for hover */
+    color: #003366;
+}
+
+
+/* Admission content */
+
+.admission-content {
+    padding: 30px;
+    background-color: rgba(0, 51, 102, 0.7);
+    /* Dark blue with transparency for the background */
+    border-radius: 10px;
+    margin: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #ff6f61;
+    /* Coral color for the title */
+    margin-bottom: 15px;
+}
+
+ol {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+
+/* Blog section */
+
+section.blog {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Dark gray background for the blog section */
+    border-radius: 10px;
+}
+
+h3 {
+    font-size: 2em;
+    color: #ff6f61;
+    /* Coral color for subheadings */
+    margin-bottom: 20px;
+}
+
+.blog-text {
+    font-size: 1.2em;
+    line-height: 1.8;
+    font-style: italic;
+    color: #e0e0e0;
+    /* Light gray for blog text */
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #2c3e50;
+    /* Dark gray footer background */
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* Additional styling for links */
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #ff6f61;
+}
+
+
+/* General styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("images/uni.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #000000;
+    /* Lighter text color for better contrast */
+}
+
+
+/* About Page specific styles */
+
+
+/* About Page specific styles */
+
+body.about-page {
+    color: #333;
+    /* Darker text color for About page */
+    background-image: url("images/about-bg.jpg");
+    /* Optional: change background image for About page */
+    background-color: #f8f8f8;
+    /* Optional: Light background for About page */
+}
+
+
+/* Header */
+
+header {
+    background-color: rgba(0, 51, 102, 0.8);
+    /* Dark semi-transparent header */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ffcc00;
+    color: #003366;
+}
+
+
+/* Hero Section */
+
+.hero {
+    background-image: url("../images/uni.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 100vh;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 4em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5em;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.hero h1,
+.hero p {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Main Content */
+
+main {
+    padding: 20px;
+}
+
+
+/* About Section specific styles */
+
+.about-page h2 {
+    font-size: 2.5em;
+    color: #003366;
+    /* Dark blue color */
+    text-align: center;
+}
+
+.about-page p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #000000;
+    /* Black text for better readability */
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* General Link Styles */
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #ff6f61;
+}
+
+
+/* About page specific links */
+
+.about-page a {
+    color: #003366;
+    /* Blue color for About page links */
+}
+
+.about-page a:hover {
+    color: #ffcc00;
+    /* Change color on hover */
+}
+
+
+/* Header */
+
+header {
+    background-color: rgba(0, 51, 102, 0.8);
+    /* Dark semi-transparent header */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ffcc00;
+    color: #003366;
+}
+
+
+/* Hero Section */
+
+.hero {
+    background-image: url("../images/uni.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 100vh;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 4em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5em;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.hero h1,
+.hero p {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Main Content */
+
+main {
+    padding: 20px;
+}
+
+
+/* About Section specific styles */
+
+.about-page h2 {
+    font-size: 2.5em;
+    color: #003366;
+    /* Dark blue color */
+    text-align: center;
+}
+
+.about-page p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+    /* Darker text for better readability */
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* General Link Styles */
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #ff6f61;
+}
+
+
+/* About page specific links */
+
+.about-page a {
+    color: #003366;
+    /* Blue color for About page links */
+}
+
+.about-page a:hover {
+    color: #ffcc00;
+    /* Change color on hover */
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Faculty - XYZ College</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .faculty-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .faculty-card {
+            background: #f9f9f9;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .faculty-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+        }
+        
+        .faculty-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .faculty-card h4 {
+            margin: 15px 0 5px;
+            color: #003366;
+        }
+        
+        .faculty-card p {
+            color: #555;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 2.2em;
+            color: #003366;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" class="logo" alt="College Logo" />
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="admission.html">Admission</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Faculty Members</h2>
+        <div class="faculty-container">
+            <div class="faculty-container">
+                <div class="faculty-card" data-img="images/faculty 1.jpg">
+                    <img src="images/faculty 1.jpg" alt="Dr. A. B. Patil" />
+                    <h4>Dr. A. B. Patil</h4>
+                    <p>Principal</p>
+                </div>
+
+                <div class="faculty-card" data-img="images/faculty 2.jpg">
+                    <img src="images/faculty 2.jpg" alt="Prof. C. D. Kulkarni" />
+                    <h4>Prof. C. D. Kulkarni</h4>
+                    <p>HOD, Computer Engineering</p>
+                </div>
+
+                <div class="faculty-card" data-img="images/faculty 3.jpg">
+                    <img src="images/faculty 3.jpg" alt="Prof. E. F. Shinde" />
+                    <h4>Prof. E. F. Shinde</h4>
+                    <p>Mechanical Engineering</p>
+                </div>
+
+                <div class="faculty-card" data-img="images/faculty 4.jpg">
+                    <img src="images/faculty 4.jpg" alt="Prof. G. H. Deshmukh" />
+                    <h4>Prof. G. H. Deshmukh</h4>
+                    <p>Electronics & Communication</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Chhatrapati Shivaji Maharaj Institute Of Technology. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
